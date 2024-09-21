@@ -1,0 +1,35 @@
+<?php
+
+$name=readline("Enter your name: ");
+
+$dateOfBirth=(readline("Provide dateOfBirth(date-month-year): "));
+
+$address=readline(" Enter your home address: ");
+
+//handle errors 
+
+try{
+    $birthDtate=new DateTime($dateOfBirth);
+    // age
+    $age=date('Y')- $birthDtate->format('Y');
+    
+
+// message
+print("Welcome $name ! back home at $address and per now you are $age years old.");
+
+}catch(Exception $e){
+    echo "Invalid dob formate";
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
